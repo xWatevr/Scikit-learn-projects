@@ -12,16 +12,13 @@ Through this project, I practiced inspecting tabular data, visualizing distribut
 
 ## Task and data
 
-The target is `Drafted`: `1` indicates a drafted player and `0` indicates a player who was not drafted. Predictions are probabilities for class `1`.
+The target is `Drafted`: `1` indicates a drafted player and `0` indicates a player who was not drafted.
 
 | Dataset | Rows | Columns | Target available |
 | --- | ---: | ---: | --- |
 | `input/train.csv` | 2,781 | 17 | Yes |
 | `input/test.csv` | 696 | 16 | No |
 
-The training set contains 1,803 positive and 978 negative examples. Features include year, age, school, height, weight, 40-yard sprint, vertical and broad jumps, bench press repetitions, agility tests, and player position. `Id` is excluded from model inputs.
-
-The supplied CSV files are included in this project package. Their original source and redistribution terms are not documented here; check the competition terms before publishing the datasets.
 
 ## Solutions
 
