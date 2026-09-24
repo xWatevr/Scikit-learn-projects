@@ -3,13 +3,17 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from pandas.core.interchange.from_dataframe import primitive_column_to_ndarray
+from pathlib import Path
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', None)
 
-client = pd.read_csv(r'E:\Project_GCI\final_assignment\telecom\Client.csv')
-record = pd.read_csv(r'E:\Project_GCI\final_assignment\telecom\Record.csv')
+
+INPUT_DIR = Path(__file__).resolve().parent / "input"
+
+client = pd.read_csv(INPUT_DIR / "Client.csv")
+record = pd.read_csv(INPUT_DIR / "Record.csv")
 
 df = client.merge(record, on="Customer_ID", how="left")
 
